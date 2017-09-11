@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>金博娱乐</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/css">  
+	body {  
+	 padding: 0px;  
+	 margin: 0px;  
+	}
+	.tippage
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 120%;
+        background: rgba(0,0,0, .8);
+    }
+    .tippage img
+    {
+        width: 100%;
+    }
+	</style> 
+	<script src="./jquery-1.11.1.min.js"></script>
+	
+</head>
+
+<body>
+    <iframe src="http://jinbo.6655.la" id="iframepage"  
+  		name="iframepage" frameBorder=0 scrolling=no width="100%"  ></iframe>  
+	<div class="tippage">
+        <!-- <img src="data:image/jpg;base64,$imageData" alt=""> -->
+        <img src="./tip.png" alt="">
+    </div>
+</body>
+<script type="text/javascript" language="javascript">  
+		$("#iframepage").height($(window).height());
+		//
+
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)||!!navigator.userAgent.match(/AppleWebKit/)) { 
+        //判断是否是移动设备打开。browser代码在下面
+
+            var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
+
+            if (ua.match(/MicroMessenger/i) == "micromessenger" //在微信中打开
+
+                || ua.match(/WeiBo/i) == "weibo" //在新浪微博客户端打开 
+
+                || ua.match(/QQ/i) == "qq" //在QQ空间打开
+
+            ) {
+                $(".tippage").show(); 
+            }else{
+                //window.location.href="http://jinbo.6655.la";
+            }
+        }
+</script> 
+</html>
